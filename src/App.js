@@ -4,11 +4,23 @@ import './App.css';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 class App extends Component {
+  
   render() {
     const style = {
       width: '100%',
       height: '100%'
     }
+    // var points = [
+    //   { lat: 7.50, lng: 97.00 },
+    //   { lat: 7.50, lng: 97.05 },
+    //   { lat: 7.50, lng: 97.00 },
+    //   { lat: 7.50, lng: 97.05 }
+    // ]
+    
+    // var bounds = new this.props.google.maps.LatLngBounds(); ใช้ปรับตำแหน่งกึ่งกลางและซูมของแผนที่
+    // for (var i = 0; i < points.length; i++) {
+    // bounds.extend(points[i]);
+    // }
     return (
       <div className="App">
         <Map google={this.props.google}
@@ -17,6 +29,7 @@ class App extends Component {
             lat: 7.89441,
             lng: 98.352656
           }}
+          // bounds={bounds} กำหนดขอบเขต 
           zoom={15}
           onClick={this.onMapClicked}>
 

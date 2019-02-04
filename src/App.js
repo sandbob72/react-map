@@ -1,10 +1,32 @@
-/*global google*/ 
+/*global google*/
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import CustomPaginationActionsTable from './components/CustomPaginationActionsTable'
 
 class App extends Component {
+  state = {
+    showingInfoWindow: false,
+    activeMarker: {},
+    selectedPlace: {},
+  };
+
+  onMarkerClick = (props, marker, e) =>
+    this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      showingInfoWindow: true
+    });
+
+  onMapClicked = (props) => {
+    if (this.state.showingInfoWindow) {
+      this.setState({
+        showingInfoWindow: false,
+        activeMarker: null
+      })
+    }
+  };
 
   render() {
     const style = {
@@ -24,27 +46,132 @@ class App extends Component {
     // }
     return (
       <div className="App">
+        <CustomPaginationActionsTable />
         <Map google={this.props.google}
-          style={{ width: '100%', height: '100%', position: 'relative' }}
+          style={{ width: '50%', height: '50%', position: 'relative' }}
+          initialCenter={{
+            lat: 13.724717,
+            lng: 100.633072
+          }}
           className={'map'}
-          zoom={14}>
+          zoom={5}
+          onClick={this.onMapClicked}>
           <Marker
             title={'The marker`s title will appear as a tooltip.'}
             name={'SOMA'}
-            position={{ lat: 37.778519, lng: -122.405640 }} />
-          <Marker
-            name={'Dolores park'}
-            position={{ lat: 37.759703, lng: -122.428093 }} />
-          <Marker />
-          <Marker
-            name={'Your position'}
-            position={{ lat: 37.762391, lng: -122.439192 }}
-            icon={{
-              url: "/path/to/custom_icon.png",
-              anchor: new google.maps.Point(32, 32),
-              scaledSize: new google.maps.Size(64, 64)
-            }} />
+            position={{ lat: 13.724717, lng: 100.633072 }}
+            onClick={this.onMarkerClick}
+            name={'กรุงเทพมหานคร'} />
+            <Marker
+            title={'The marker`s title will appear as a tooltip.'}
+            name={'SOMA'}
+            position={{ lat: 8.090982, lng: 98.908117 }}
+            onClick={this.onMarkerClick}
+            name={'กระบี่'} />
+            <Marker
+            title={'The marker`s title will appear as a tooltip.'}
+            name={'SOMA'}
+            position={{ lat: 10.497312, lng: 99.164224 }}
+            onClick={this.onMarkerClick}
+            name={'ชุมพร'} />
+            <Marker
+            title={'The marker`s title will appear as a tooltip.'}
+            name={'SOMA'}
+            position={{ lat: 7.556819, lng: 99.6098568 }}
+            onClick={this.onMarkerClick}
+            name={'ตรัง'} />
+            <Marker
+            title={'The marker`s title will appear as a tooltip.'}
+            name={'SOMA'}
+            position={{ lat: 8.430162, lng: 99.933542 }}
+            onClick={this.onMarkerClick}
+            name={'นครศรีธรรมราช'} />
+            <Marker
+            title={'The marker`s title will appear as a tooltip.'}
+            name={'SOMA'}
+            position={{ lat: 6.424768, lng: 101.806620 }}
+            onClick={this.onMarkerClick}
+            name={'นราธิวาส'} />
+            <Marker
+            title={'The marker`s title will appear as a tooltip.'}
+            name={'SOMA'}
+            position={{ lat: 6.762197, lng: 101.311243 }}
+            onClick={this.onMarkerClick}
+            name={'ปัตตานี'} />
+            <Marker
+            title={'The marker`s title will appear as a tooltip.'}
+            name={'SOMA'}
+            position={{ lat: 8.454399, lng: 98.509614 }}
+            onClick={this.onMarkerClick}
+            name={'พังงา'} />
+            <Marker
+            title={'The marker`s title will appear as a tooltip.'}
+            name={'SOMA'}
+            position={{ lat: 7.614617, lng: 100.073829 }}
+            onClick={this.onMarkerClick}
+            name={'พัทลุง'} />
+            <Marker
+            title={'The marker`s title will appear as a tooltip.'}
+            name={'SOMA'}
+            position={{ lat: 7.952629, lng: 98.331158 }}
+            onClick={this.onMarkerClick}
+            name={'ภูเก็ต'} />
+            <Marker
+            title={'The marker`s title will appear as a tooltip.'}
+            name={'SOMA'}
+            position={{ lat: 6.539778, lng: 101.273267 }}
+            onClick={this.onMarkerClick}
+            name={'ยะลา'} />
+            <Marker
+            title={'The marker`s title will appear as a tooltip.'}
+            name={'SOMA'}
+            position={{ lat: 9.953405, lng: 98.599058 }}
+            onClick={this.onMarkerClick}
+            name={'ระนอง'} />
+            <Marker
+            title={'The marker`s title will appear as a tooltip.'}
+            name={'SOMA'}
+            position={{ lat: 7.189657, lng: 100.595053 }}
+            onClick={this.onMarkerClick}
+            name={'สงขลา'} />
+            <Marker
+            title={'The marker`s title will appear as a tooltip.'}
+            name={'SOMA'}
+            position={{ lat: 6.621256, lng: 100.0652563 }}
+            onClick={this.onMarkerClick}
+            name={'สตูล'} />
+            <Marker
+            title={'The marker`s title will appear as a tooltip.'}
+            name={'SOMA'}
+            position={{ lat: 9.145186, lng: 99.296987 }}
+            onClick={this.onMarkerClick}
+            name={'สุราษฎร์ธานี'} />
+
+          
+          <InfoWindow
+            marker={this.state.activeMarker}
+            visible={this.state.showingInfoWindow}>
+            <div>
+              <h1>{this.state.selectedPlace.name}</h1>
+            </div>
+          </InfoWindow>
         </Map>
+
+        {/* <Map google={this.props.google}
+          onClick={this.onMapClicked}
+          className={'map'}
+              zoom={14}>
+        <Marker onClick={this.onMarkerClick}
+                name={'Current location'} />
+ 
+        <InfoWindow
+          marker={this.state.activeMarker}
+          visible={this.state.showingInfoWindow}>
+            <div>
+              <h1>{this.state.selectedPlace.name}</h1>
+            </div>
+        </InfoWindow>
+      </Map> */}
       </div>
     );
   }

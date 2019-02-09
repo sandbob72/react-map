@@ -174,13 +174,28 @@ class CustomPaginationActionsTable extends React.Component {
     const emptyRows = rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
     let students = []
     students = data.slice(0, 75)
+    console.log('students: ', students);
+    let lookup = {}
+    let lookup2 = [] 
+     
+    for (var i = 0, len = students.length; i < len; i++) {
+     // lookup2 = [ ...lookup2, { province: students[i].Birth_Province, number:0} ] 
+        lookup2.push( { province: students[i].Birth_Province, number:0})
+      // lookup2[i].province = students[i].Birth_Province;
+    }
+    // for (var i = 0, len = students.length; i < len; i++) {
+    //   lookup[i] = students[i].Number_Student_Province;
+    // }
+    console.log('lookup2:',lookup2);
+    
+
 
     return (
       <Paper className={classes.root}>
         <div className={classes.tableWrapper}>
           <Table className={classes.table}>
             <TableBody>
-              {students.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((item,index) => (
+              {students.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((item, index) => (
                 <TableRow key={index}>
                   <TableCell component="th" scope="row">
                     {item.Birth_Province}

@@ -57,95 +57,65 @@ class App extends Component {
           zoom={5}
           onClick={this.onMapClicked}>
           <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
             position={{ lat: 13.724717, lng: 100.633072 }}
             onClick={this.onMarkerClick}
             name={'กรุงเทพมหานคร'} />
             <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
             position={{ lat: 8.090982, lng: 98.908117 }}
             onClick={this.onMarkerClick}
             name={'กระบี่'} />
             <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
             position={{ lat: 10.497312, lng: 99.164224 }}
             onClick={this.onMarkerClick}
             name={'ชุมพร'} />
             <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
             position={{ lat: 7.556819, lng: 99.6098568 }}
             onClick={this.onMarkerClick}
             name={'ตรัง'} />
             <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
             position={{ lat: 8.430162, lng: 99.933542 }}
             onClick={this.onMarkerClick}
             name={'นครศรีธรรมราช'} />
             <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
             position={{ lat: 6.424768, lng: 101.806620 }}
             onClick={this.onMarkerClick}
             name={'นราธิวาส'} />
             <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
             position={{ lat: 6.762197, lng: 101.311243 }}
             onClick={this.onMarkerClick}
             name={'ปัตตานี'} />
             <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
             position={{ lat: 8.454399, lng: 98.509614 }}
             onClick={this.onMarkerClick}
             name={'พังงา'} />
             <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
             position={{ lat: 7.614617, lng: 100.073829 }}
             onClick={this.onMarkerClick}
             name={'พัทลุง'} />
             <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
             position={{ lat: 7.952629, lng: 98.331158 }}
             onClick={this.onMarkerClick}
             name={'ภูเก็ต'} />
             <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
             position={{ lat: 6.539778, lng: 101.273267 }}
             onClick={this.onMarkerClick}
             name={'ยะลา'} />
             <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
             position={{ lat: 9.953405, lng: 98.599058 }}
             onClick={this.onMarkerClick}
             name={'ระนอง'} />
             <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
             position={{ lat: 7.189657, lng: 100.595053 }}
             onClick={this.onMarkerClick}
             name={'สงขลา'} />
             <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
             position={{ lat: 6.621256, lng: 100.0652563 }}
             onClick={this.onMarkerClick}
             name={'สตูล'} />
             <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
             position={{ lat: 9.145186, lng: 99.296987 }}
             onClick={this.onMarkerClick}
-            name={'สุราษฎร์ธานี'} />
+            name={'สุราษฎร์ธานี'}/>
 
           
           <InfoWindow

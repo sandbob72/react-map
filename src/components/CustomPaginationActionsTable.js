@@ -94,11 +94,11 @@ const TablePaginationActionsWrapped = withStyles(actionsStyles, { withTheme: tru
   TablePaginationActions,
 );
 
-let counter = 0;
-function createData(name, calories, fat) {
-  counter += 1;
-  return { id: counter, name, calories, fat };
-}
+// let counter = 0;
+// function createData(name, calories, fat) {
+//   counter += 1;
+//   return { id: counter, name, calories, fat };
+// }
 
 const styles = theme => ({
   root: {
@@ -175,17 +175,14 @@ class CustomPaginationActionsTable extends React.Component {
     let students = []
     students = data.slice(0, 75)
     console.log('students: ', students);
-    let lookup = {}
+    // let lookup = {}
     let lookup2 = [] 
      
     for (var i = 0, len = students.length; i < len; i++) {
      // lookup2 = [ ...lookup2, { province: students[i].Birth_Province, number:0} ] 
-        lookup2.push( { province: students[i].Birth_Province, number:0})
-      // lookup2[i].province = students[i].Birth_Province;
+        lookup2.push( { province: students[i].Birth_Province, number:students[i].Number_Student_Province}) //ดึงข้อมูลจาก students ไปยัง lookup2
     }
-    // for (var i = 0, len = students.length; i < len; i++) {
-    //   lookup[i] = students[i].Number_Student_Province;
-    // }
+    
     console.log('lookup2:',lookup2);
     
 

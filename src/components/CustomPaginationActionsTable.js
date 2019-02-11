@@ -14,6 +14,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
 import Tabletop from 'tabletop';
+import Rechart from './Rechart'
 
 const actionsStyles = theme => ({
   root: {
@@ -224,6 +225,7 @@ class CustomPaginationActionsTable extends React.Component {
               </TableRow>
             </TableFooter>
           </Table>
+          <Rechart />
         </div>
       </Paper>
     );

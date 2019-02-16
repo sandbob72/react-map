@@ -5,15 +5,17 @@ import CustomPaginationActionsTable from './components/CustomPaginationActionsTa
 import SimpleTabs from './components/SimpleTabs'
 import SimpleMap from './components/SimpleMap'
 import { BarChart, XAxis, YAxis, Tooltip, Legend, CartesianGrid, Bar } from 'recharts';
+import MapVtwo from './components/MapVtwo'
 
 
 class App extends Component {
 
   render() {
     let data = [{ name: 'a', pv: 12, uv: 15 }]
-
+    
     return (
       <div className="App">
+        <MapVtwo />
         <SimpleTabs />
         {/* <BarChart width={730} height={250} data={data}>
           <CartesianGrid strokeDasharray="3 3" />

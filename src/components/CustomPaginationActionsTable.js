@@ -225,7 +225,7 @@ class CustomPaginationActionsTable extends React.Component {
               </TableRow>
             </TableFooter>
           </Table>
-          <Rechart />
+          {/* <Rechart /> */}
         </div>
       </Paper>
     );

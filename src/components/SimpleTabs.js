@@ -7,7 +7,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import CustomPaginationActionsTable from './CustomPaginationActionsTable'
 import SimpleMap from './SimpleMap'
-
+import MapVtwo from './MapVtwo'
 function TabContainer(props) {
   return (
     <Typography component="div" style={{ padding: 8 * 3 }}>
@@ -50,7 +50,7 @@ class SimpleTabs extends React.Component {
           </Tabs>
         </AppBar>
         {value === 0 && <TabContainer><CustomPaginationActionsTable /></TabContainer>}
-        {value === 1 && <TabContainer><SimpleMap /></TabContainer>}
+        {value === 1 && <TabContainer><MapVtwo /></TabContainer>}
         
       </div>
     );

@@ -46,7 +46,7 @@ class SimpleMap extends Component {
     // }
     
     return (
-      <div className="App">
+      <div>
         <Map google={this.props.google}
           style={{ width: '100%', height: '100%', position: 'relative' }}
           initialCenter={{

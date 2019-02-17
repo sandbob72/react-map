@@ -1,7 +1,7 @@
 var simplemaps_countrymap_mapdata={
   main_settings: {
    //General settings
-    width: "responsive", //'700' or 'responsive'
+    width: "300", //'700' or 'responsive'
     background_color: "#FFFFFF",
     background_transparent: "yes",
     border_color: "#ffffff",
@@ -73,321 +73,467 @@ var simplemaps_countrymap_mapdata={
   },
   state_specific: {
     THA374: {
+      color: "#626ffa",
       name: "Mae Hong Son",
-      color: "#ece6ff"
+      description: "จำนวนนักศึกษา 13 คน"
     },
     THA375: {
-      name: "Chumphon",
-      color: "#d9ccff"
+      color: "#04108c",
+      name: "Chumphon"
     },
     THA376: {
-      name: "Nakhon Si Thammarat",
-      color: "#4000ff"
+      color: "#04108c",
+      name: "Nakhon Si Thammarat"
     },
     THA377: {
+      color: "#04108c",
       name: "Phuket",
-      color: "#06001a"
+      description: " "
     },
     THA378: {
+      color: "#04108c",
       name: "Phangnga",
-      color: "#b399ff"
+      description: " "
     },
     THA379: {
+      color: "#04108c",
       name: "Ranong",
-      color: "#ece6ff"
+      description: " "
     },
     THA380: {
+      color: "#04108c",
       name: "Surat Thani",
-      color: "#794dff"
+      description: " "
     },
     THA382: {
+      color: "#04108c",
       name: "Krabi",
-      color: "#c6b3ff"
+      description: " "
     },
     THA383: {
+      color: "#04108c",
       name: "Phatthalung",
-      color: "#b399ff"
+      description: " "
     },
     THA385: {
+      color: "#04108c",
       name: "Satun",
-      color: "#d9ccff"
+      description: " "
     },
     THA386: {
+      color: "#04108c",
       name: "Songkhla",
-      color: "#13004d"
+      description: " "
     },
     THA387: {
+      color: "#04108c",
       name: "Trang",
-      color: "#531aff"
+      description: " "
     },
     THA388: {
+      color: "#04108c",
       name: "Yala",
-      color: "#b399ff"
+      description: " "
     },
     THA389: {
+      color: "#0616bd",
       name: "Chiang Rai",
-      color: "#ece6ff"
+      description: " "
     },
     THA390: {
+      color: "#0616bd",
       name: "Chiang Mai",
-      color: "#ece6ff"
+      description: " "
     },
     THA391: {
+      color: "#071cef",
       name: "Lampang",
-      color: "#ece6ff"
+      description: " "
     },
     THA392: {
+      color: "#626ffa",
       name: "Lamphun",
-      color: "#ece6ff"
+      description: " "
     },
     THA393: {
+      color: "#626ffa",
       name: "Nan",
-      color: "#ece6ff"
+      description: " "
     },
     THA394: {
+      color: "#071cef",
       name: "Phayao",
-      color: "#ece6ff"
+      description: " "
     },
     THA395: {
+      color: "#071cef",
       name: "Phrae",
-      color: "#ece6ff"
+      description: " "
     },
     THA396: {
+      color: "#0616bd",
       name: "Phitsanulok",
-      color: "#ece6ff"
+      description: " "
     },
     THA397: {
+      color: "#626ffa",
       name: "Sukhothai",
-      color: "#ece6ff"
+      description: " "
     },
     THA398: {
       name: "Uttaradit",
-      color: "#ece6ff"
+      description: " "
     },
     THA399: {
+      color: "#071cef",
       name: "Kanchanaburi",
-      color: "#ece6ff"
+      description: " "
     },
     THA400: {
+      color: "#3042f9",
       name: "Kamphaeng Phet",
-      color: "#ece6ff"
+      description: " "
     },
     THA401: {
+      color: "#626ffa",
       name: "Phichit",
-      color: "#ece6ff"
+      description: " "
     },
     THA402: {
+      color: "#071cef",
       name: "Phetchabun",
-      color: "#ece6ff"
+      description: " "
     },
     THA403: {
+      color: "#071cef",
       name: "Suphan Buri",
-      color: "#ece6ff"
+      description: " "
     },
     THA404: {
+      color: "#626ffa",
       name: "Tak",
-      color: "#ece6ff"
+      description: " "
     },
     THA405: {
+      color: "#626ffa",
       name: "Uthai Thani",
-      color: "#ece6ff"
+      description: " "
     },
     THA406: {
+      color: "#626ffa",
       name: "Ang Thong",
-      color: "#ece6ff"
+      description: " "
     },
     THA407: {
+      color: "#3042f9",
       name: "Chai Nat",
-      color: "#ece6ff"
+      description: " "
     },
     THA408: {
+      color: "#3042f9",
       name: "Lop Buri",
-      color: "#ece6ff"
+      description: " "
     },
     THA409: {
+      color: "#626ffa",
       name: "Nakhon Nayok",
-      color: "#ece6ff"
+      description: " "
     },
     THA410: {
+      color: "#3042f9",
       name: "Prachin Buri",
-      color: "#ece6ff"
+      description: " "
     },
     THA411: {
+      color: "#071cef",
       name: "Nakhon Sawan",
-      color: "#ece6ff"
+      description: " "
     },
     THA412: {
+      color: "#071cef",
       name: "Phra Nakhon Si Ayutthaya",
-      color: "#ece6ff"
+      description: " "
     },
     THA413: {
+      color: "#3042f9",
       name: "Pathum Thani",
-      color: "#ece6ff"
+      description: " "
     },
     THA414: {
+      color: "#626ffa",
       name: "Sing Buri",
-      color: "#ece6ff"
+      description: " "
     },
     THA415: {
+      color: "#071cef",
       name: "Saraburi",
-      color: "#ece6ff"
+      description: " "
     },
     THA416: {
+      color: "#04108c",
       name: "Bangkok Metropolis",
-      color: "#9f80ff"
+      description: " "
     },
     THA417: {
+      color: "#071cef",
       name: "Nonthaburi",
-      color: "#ece6ff"
+      description: " "
     },
     THA418: {
+      color: "#0616bd",
       name: "Nakhon Pathom",
-      color: "#ece6ff"
+      description: " "
     },
     THA419: {
+      color: "#071cef",
       name: "Phetchaburi",
-      color: "#ece6ff"
+      description: " "
     },
     THA420: {
+      color: "#0616bd",
       name: "Prachuap Khiri Khan",
-      color: "#ece6ff"
+      description: " "
     },
     THA421: {
+      color: "#0616bd",
       name: "Ratchaburi",
-      color: "#ece6ff"
+      description: " "
     },
     THA422: {
+      color: "#0616bd",
       name: "Samut Prakan",
-      color: "#ece6ff"
+      description: " "
     },
     THA423: {
+      color: "#071cef",
       name: "Samut Sakhon",
-      color: "#ece6ff"
+      description: " "
     },
     THA424: {
+      color: "#626ffa",
       name: "Samut Songkhram",
-      color: "#ece6ff"
+      description: " "
     },
     THA425: {
+      color: "#071cef",
       name: "Si Sa Ket",
-      color: "#ece6ff"
+      description: " "
     },
     THA426: {
+      color: "#071cef",
       name: "Ubon Ratchathani",
-      color: "#ece6ff"
+      description: " "
     },
     THA427: {
+      color: "#626ffa",
       name: "Amnat Charoen",
-      color: "#ece6ff"
+      description: " "
     },
     THA428: {
+      color: "#3042f9",
       name: "Yasothon",
-      color: "#ece6ff"
+      description: " "
     },
     THA430: {
+      color: "#0616bd",
       name: "Chon Buri",
-      color: "#ece6ff"
+      description: " "
     },
     THA431: {
+      color: "#3042f9",
       name: "Chachoengsao",
-      color: "#ece6ff"
+      description: " "
     },
     THA432: {
+      color: "#3042f9",
       name: "Chanthaburi",
-      color: "#ece6ff"
+      description: " "
     },
     THA433: {
+      color: "#626ffa",
       name: "Sa Kaeo",
-      color: "#ece6ff"
+      description: " "
     },
     THA434: {
+      color: "#0616bd",
       name: "Rayong",
-      color: "#ece6ff"
+      description: " "
     },
     THA435: {
+      color: "#626ffa",
       name: "Trat",
-      color: "#ece6ff"
+      description: " "
     },
     THA436: {
+      color: "#0616bd",
       name: "Buri Ram",
-      color: "#ece6ff"
+      description: " "
     },
     THA437: {
+      color: "#3042f9",
       name: "Chaiyaphum",
-      color: "#ece6ff"
+      description: " "
     },
     THA438: {
+      color: "#0616bd",
       name: "Khon Kaen",
-      color: "#ece6ff"
+      description: " "
     },
     THA439: {
+      color: "#3042f9",
       name: "Kalasin",
-      color: "#ece6ff"
+      description: " "
     },
     THA440: {
+      color: "#3042f9",
       name: "Maha Sarakham",
-      color: "#ece6ff"
+      description: " "
     },
     THA441: {
+      color: "#0616bd",
       name: "Nakhon Ratchasima",
-      color: "#ece6ff"
+      description: " "
     },
     THA442: {
+      color: "#071cef",
       name: "Roi Et",
-      color: "#ece6ff"
+      description: " "
     },
     THA443: {
+      color: "#0616bd",
       name: "Surin",
-      color: "#ece6ff"
+      description: " "
     },
     THA445: {
+      color: "#071cef",
       name: "Loei",
-      color: "#ece6ff"
+      description: " "
     },
     THA446: {
+      color: "#0616bd",
       name: "Nong Khai",
-      color: "#ece6ff"
+      description: " "
     },
     THA447: {
+      color: "#071cef",
       name: "Sakon Nakhon",
-      color: "#ece6ff"
+      description: " "
     },
     THA448: {
+      color: "#0616bd",
       name: "Udon Thani",
-      color: "#ece6ff"
+      description: " "
     },
     THA449: {
+      color: "#626ffa",
       name: "Nong Bua Lam Phu",
-      color: "#ece6ff"
+      description: " "
     },
     THA472: {
+      color: "#3042f9",
       name: "Nakhon Phanom",
-      color: "#ece6ff"
+      description: " "
     },
     THA473: {
+      color: "#3042f9",
       name: "Mukdahan",
-      color: "#ece6ff"
+      description: " "
     },
     THA493: {
+      color: "#04108c",
       name: "Narathiwat",
-      color: "#c6b3ff"
+      description: " "
     },
     THA494: {
+      color: "#04108c",
       name: "Pattani",
-      color: "#d9ccff"
+      description: " "
     },
     THA5499: {
       name: "Bueng Kan",
-      color: "#ece6ff"
+      description: " "
     }
   },
-  locations: {
-    "0": {
-      lat: "13.753979",
-      lng: "100.501444",
-      name: "Bangkok"
-    }
-  },
+  locations: {},
   labels: {},
-  regions: {}
+  regions: {},
+  data: {
+    data: {
+      THA374: "3",
+      THA375: "214",
+      THA376: "1240",
+      THA377: "2378",
+      THA378: "389",
+      THA379: "105",
+      THA380: "826",
+      THA382: "339",
+      THA383: "473",
+      THA385: "182",
+      THA386: "2043",
+      THA387: "1044",
+      THA388: "471",
+      THA389: "28",
+      THA390: "31",
+      THA391: "14",
+      THA392: "4",
+      THA393: "3",
+      THA394: "17",
+      THA395: "11",
+      THA396: "19",
+      THA397: "5",
+      THA399: "12",
+      THA400: "9",
+      THA401: "1",
+      THA402: "12",
+      THA403: "11",
+      THA404: "2",
+      THA405: "2",
+      THA406: "4",
+      THA407: "6",
+      THA408: "8",
+      THA409: "2",
+      THA410: "8",
+      THA411: "16",
+      THA412: "12",
+      THA413: "9",
+      THA414: "4",
+      THA415: "17",
+      THA416: "528",
+      THA417: "15",
+      THA418: "19",
+      THA419: "11",
+      THA420: "23",
+      THA421: "39",
+      THA422: "26",
+      THA423: "13",
+      THA424: "1",
+      THA425: "14",
+      THA426: "15",
+      THA427: "4",
+      THA428: "9",
+      THA430: "37",
+      THA431: "6",
+      THA432: "10",
+      THA433: "3",
+      THA434: "18",
+      THA435: "2",
+      THA436: "19",
+      THA437: "7",
+      THA438: "33",
+      THA439: "10",
+      THA440: "10",
+      THA441: "45",
+      THA442: "15",
+      THA443: "22",
+      THA445: "14",
+      THA446: "20",
+      THA447: "16",
+      THA448: "39",
+      THA449: "5",
+      THA472: "10",
+      THA473: "6",
+      THA493: "300",
+      THA494: "237"
+    }
+  }
 };

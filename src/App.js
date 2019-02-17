@@ -15,8 +15,8 @@ class App extends Component {
     
     return (
       <div className="App">
-        <MapVtwo />
         <SimpleTabs />
+        <MapVtwo />
         {/* <BarChart width={730} height={250} data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />

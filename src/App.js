@@ -6,6 +6,7 @@ import SimpleTabs from './components/SimpleTabs'
 import SimpleMap from './components/SimpleMap'
 import { BarChart, XAxis, YAxis, Tooltip, Legend, CartesianGrid, Bar } from 'recharts';
 import MapVtwo from './components/MapVtwo'
+import ReactSimpleMaps from './components/ReactSimpleMaps'
 
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
       <div className="App">
         <SimpleTabs />
         <MapVtwo />
+        <ReactSimpleMaps/>
         {/* <BarChart width={730} height={250} data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />

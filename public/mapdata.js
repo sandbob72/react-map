@@ -1,3 +1,5 @@
+
+
 var simplemaps_countrymap_mapdata={
   main_settings: {
    //General settings

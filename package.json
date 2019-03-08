@@ -10,6 +10,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3",
+    "react-simple-maps": "^0.12.1",
     "react-typekit": "^1.1.4",
     "recharts": "^1.4.2",
     "tabletop": "^1.5.2"

@@ -34,7 +34,7 @@ class BasicMap extends Component {
           }}
           >
           <ZoomableGroup center={[100,14]}>
-            <Geographies geography={ "/gadm36_THA.json" }>
+            <Geographies geography={ "/gadm36_THA_1.json" }>
               {(geographies, projection) => geographies.map((geography, i) => (
                 <Geography
                   key={ i }

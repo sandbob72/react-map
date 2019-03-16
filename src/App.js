@@ -8,6 +8,7 @@ import { BarChart, XAxis, YAxis, Tooltip, Legend, CartesianGrid, Bar } from 'rec
 import MapVtwo from './components/MapVtwo'
 import ReactSimpleMaps from './components/ReactSimpleMaps'
 import ReactMap from './components/ReactMap'
+import ReactMapTwo from './components/ReactMapTwo'
 
 
 
@@ -20,8 +21,13 @@ class App extends Component {
       <div className="App">
         <SimpleTabs />
         <MapVtwo />
+        <h1>v.1</h1>
         <ReactSimpleMaps/>
+        <h1>v.2</h1>
         <ReactMap/>
+        <h1>v.3</h1>
+        {/* <ReactMapTwo/> */}
+
         {/* <BarChart width={730} height={250} data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />

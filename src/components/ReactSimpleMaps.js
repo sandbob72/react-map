@@ -5,7 +5,7 @@ import {
   Geographies,
   Geography,
 } from "react-simple-maps"
-import { scaleLinear } from "d3-scale"
+import ReactTooltip from "react-tooltip"
 
 const wrapperStyles = {
   width: "100%",
@@ -13,34 +13,34 @@ const wrapperStyles = {
   margin: "0 auto",
 }
 
-const popScale = scaleLinear()
-  .domain([0,100000000,1400000000])
-  .range(["#CFD8DC","#607D8B","#37474F"])
-
 class BasicMap extends Component {
+  componentDidMount() {
+    setTimeout(() => {
+      ReactTooltip.rebuild()
+    }, 100)
+  }
   render() {
     return (
       <div style={wrapperStyles}>
         <ComposableMap
           projectionConfig={{
-            scale: 4000,
-            rotation: [-11,0,0],
+            scale: 2900,
           }}
           width={980}
-          height={1000}
+          height={850}
           style={{
             width: "100%",
             height: "auto",
           }}
           >
-          <ZoomableGroup center={[100,14]}>
-            <Geographies geography={ "/gadm36_THA_1.json" }>
-              {(geographies, projection) => geographies.map((geography, i) => (
+          <ZoomableGroup center={[100,14]} disablePanning>
+            <Geographies geography="/gadm36_THA_1.json">
+              {(geographies, projection) => geographies.map((geography, i) => geography.id !== "ATA" && (
                 <Geography
-                  key={ i }
-                  geography={ geography }
-                  projection={ projection }
-                  onClick={ this.handleClick }
+                  key={i}
+                  data-tip={geography.properties.NL_NAME_1}
+                  geography={geography}
+                  projection={projection}
                   style={{
                     default: {
                       fill: "#ECEFF1",
@@ -49,23 +49,24 @@ class BasicMap extends Component {
                       outline: "none",
                     },
                     hover: {
-                      fill: "##CFD8DC",
+                      fill: "#607D8B",
                       stroke: "#607D8B",
                       strokeWidth: 0.75,
                       outline: "none",
                     },
                     pressed: {
-                      fill: "FF5722",
+                      fill: "#FF5722",
                       stroke: "#607D8B",
                       strokeWidth: 0.75,
                       outline: "none",
-                    }
+                    },
                   }}
                 />
               ))}
             </Geographies>
           </ZoomableGroup>
         </ComposableMap>
+        <ReactTooltip />
       </div>
     )
   }

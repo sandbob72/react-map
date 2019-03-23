@@ -6,6 +6,7 @@ import { BarChart, XAxis, YAxis, Tooltip, Legend, CartesianGrid, Bar } from 'rec
 import MapVtwo from './components/simpleMap/MapVtwo'
 import WithReactTooltipThai from './components/react-simple-maps/WithReactTooltipThai'
 import WithReactTooltipWorld from './components/react-simple-maps/WithReactTooltipWorld'
+import Index from './components/react-simple-maps/Index'
 
 
 
@@ -23,6 +24,7 @@ class App extends Component {
         <h1>v.2</h1>
         <WithReactTooltipWorld/>
         <h1>v.3</h1>
+        <Index />
 
         {/* <BarChart width={730} height={250} data={data}>
           <CartesianGrid strokeDasharray="3 3" />

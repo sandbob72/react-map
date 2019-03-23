@@ -5,9 +5,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
-import CustomPaginationActionsTable from './CustomPaginationActionsTable'
-import SimpleMap from './SimpleMap'
-import MapVtwo from './MapVtwo'
+import CustomPaginationActionsTable from './Table/CustomPaginationActionsTable'
+import MapVtwo from './simpleMap/MapVtwo'
 function TabContainer(props) {
   return (
     <Typography component="div" style={{ padding: 8 * 3 }}>

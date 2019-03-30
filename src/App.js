@@ -19,12 +19,12 @@ class App extends Component {
       <div className="App">
         <SimpleTabs />
         {/* <MapVtwo /> */}
-        <h1>v.1</h1>
-        <WithReactTooltipThai/>
-        <h1>v.2</h1>
-        <WithReactTooltipWorld/>
-        <h1>v.3</h1>
-        <Index />
+        {/* <h1>v.1</h1> */}
+        {/* <WithReactTooltipThai/> */}
+        {/* <h1>v.2</h1> */}
+        {/* <WithReactTooltipWorld/> */}
+        {/* <h1>v.3</h1> */}
+        {/* <Index /> */}
 
         {/* <BarChart width={730} height={250} data={data}>
           <CartesianGrid strokeDasharray="3 3" />

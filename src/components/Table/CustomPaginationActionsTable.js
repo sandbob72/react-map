@@ -132,8 +132,8 @@ class CustomPaginationActionsTable extends React.Component {
           data: googleData.Sheet2.elements
         })
 
-        console.log('data1: ', googleData)
-        console.log('data1 sheet1: ', googleData.Sheet1)
+        // console.log('data1: ', googleData)
+        // console.log('data1 sheet1: ', googleData.Sheet1)
         console.log('data1 sheet2: ', googleData.Sheet2)
       },
       simpleSheet: false

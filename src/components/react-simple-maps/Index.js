@@ -8,6 +8,7 @@ import {
 import { scaleLinear } from "d3-scale"
 import { csv } from "d3-fetch"
 import ReactTooltip from "react-tooltip"
+import Tabletop from 'tabletop';
 
 const wrapperStyles = {
   width: "100%",
@@ -16,8 +17,8 @@ const wrapperStyles = {
 }
 
 const colorScale = scaleLinear()
-  .domain([1,1200])
-  .range(["#FBE9E7","#FF5722"])
+  .domain([1, 1200])
+  .range(["#FBE9E7", "#FF5722"])
 
 class AlbersUSA extends Component {
   constructor() {
@@ -27,10 +28,23 @@ class AlbersUSA extends Component {
     }
   }
   componentDidMount() {
-    csv("/populationThai.csv")
-      .then(population => {
-        this.setState({ population })
-      })
+    Tabletop.init({
+      key: '1q66ZlEv6Rj8_BT1h7Dw78kTL-ietR6deNufgflj8n3c',
+      callback: googleData => {
+        this.setState({
+          population: googleData.Sheet2.elements
+        })
+
+        // console.log('data1: ', googleData)
+        // console.log('data1 sheet1: ', googleData.Sheet1)
+        console.log('population: ', googleData.Sheet2.elements)
+      },
+      simpleSheet: false
+    })
+    // csv("/populationThai.csv")
+    //   .then(population => {
+    //     this.setState({ population })
+    //   })
   }
   render() {
 
@@ -49,8 +63,8 @@ class AlbersUSA extends Component {
             width: "100%",
             height: "auto",
           }}
-          >
-          <ZoomableGroup center={[100,14]} disablePanning>
+        >
+          <ZoomableGroup center={[100, 14]} disablePanning>
             <Geographies geography="/gadm36_THA_1.json" disableOptimization>
               {(geographies, projection) =>
                 geographies.map((geography, i) => {
@@ -88,7 +102,7 @@ class AlbersUSA extends Component {
                     />
                   )
                 }
-              )}
+                )}
             </Geographies>
           </ZoomableGroup>
         </ComposableMap>

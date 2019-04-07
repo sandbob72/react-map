@@ -17,7 +17,8 @@ class App extends Component {
     
     return (
       <div className="App">
-        <SimpleTabs />
+      <Index/>
+        {/* <SimpleTabs /> */}
         {/* <MapVtwo /> */}
         {/* <h1>v.1</h1> */}
         {/* <WithReactTooltipThai/> */}

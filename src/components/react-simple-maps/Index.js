@@ -6,9 +6,9 @@ import {
   Geography,
 } from "react-simple-maps"
 import { scaleLinear } from "d3-scale"
-import { csv } from "d3-fetch"
 import ReactTooltip from "react-tooltip"
 import Tabletop from 'tabletop';
+import { Spinner } from 'react-bootstrap'
 
 const wrapperStyles = {
   width: "100%",
@@ -19,6 +19,18 @@ const wrapperStyles = {
 const colorScale = scaleLinear()
   .domain([1, 1200])
   .range(["#FBE9E7", "#FF5722"])
+
+const SpinnerPage = () => {
+    return (
+      <>
+        <div>
+          <Spinner animation="border" role="status">
+            <span className="sr-only">Loading...</span>
+          </Spinner>
+          </div>
+      </>
+    );
+  }  
 
 class AlbersUSA extends Component {
   constructor() {
@@ -34,26 +46,24 @@ class AlbersUSA extends Component {
         this.setState({
           population: googleData.Sheet2.elements
         })
-
-        // console.log('data1: ', googleData)
-        // console.log('data1 sheet1: ', googleData.Sheet1)
         console.log('population: ', googleData.Sheet2.elements)
       },
       simpleSheet: false
     })
-    // csv("/populationThai.csv")
-    //   .then(population => {
-    //     this.setState({ population })
-    //   })
+    setTimeout(() => {
+      ReactTooltip.rebuild()
+    }, 5000)
   }
   render() {
 
     const { population } = this.state
+    if (population.length === 0) {
+      return SpinnerPage()
+    }
 
     return (
       <div style={wrapperStyles}>
         <ComposableMap
-          // projection="albersUsa"
           projectionConfig={{
             scale: 4000,
           }}
@@ -71,12 +81,14 @@ class AlbersUSA extends Component {
                   const statePopulation = population.find(s =>
                     s.name === geography.properties.NAME_1
                   ) || {}
+                  console.log('NAME_1',geography.properties.NAME_1);
+                  console.log('pop', statePopulation.name);
                   return (
                     <Geography
                       key={`state-${geography.properties.ID_1}`}
                       cacheId={`state-${geography.properties.ID_1}`}
                       round
-                      data-tip={geography.properties.NAME_1}
+                      data-tip={statePopulation.name}
                       geography={geography}
                       projection={projection}
                       style={{
